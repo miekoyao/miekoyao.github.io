@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="150"
+   height="150"
+   viewBox="0 0 150 150"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="favicon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.53606888"
+     inkscape:cx="416.92403"
+     inkscape:cy="487.81045"
+     inkscape:window-width="1920"
+     inkscape:window-height="1111"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="150"
+       height="150"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-31.770432,-28.49445)">
+    <path
+       sodipodi:type="star"
+       style="fill:#c6b0dc;fill-opacity:1;stroke-width:0.264583"
+       id="path1"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="106.09636"
+       sodipodi:cy="104.35135"
+       sodipodi:r1="77.2547"
+       sodipodi:r2="49.752026"
+       sodipodi:arg1="-2.8198421"
+       sodipodi:arg2="-2.1915236"
+       inkscape:rounded="0.35"
+       inkscape:randomized="0"
+       d="m 32.806116,79.921268 c 5.22018,-15.660542 30.924876,-6.439687 44.353126,-16.040986 13.428251,-9.6013 13.016389,-36.90672 29.523578,-36.781407 16.50718,0.125313 15.68081,27.421332 28.96175,37.225392 13.28094,9.804061 39.12266,0.974518 44.10448,16.712508 4.98182,15.73799 -21.23359,23.387005 -26.45377,39.047545 -5.22019,15.66054 11.16274,37.509 -2.26551,47.1103 -13.42825,9.6013 -28.8039,-12.96737 -45.31109,-13.09268 -16.507183,-0.12531 -32.223703,22.20732 -45.504639,12.40326 -13.280936,-9.80406 3.431806,-31.40128 -1.550015,-47.13926 -4.981821,-15.738 -31.07809,-23.784129 -25.85791,-39.444672 z"
+       inkscape:transform-center-x="-0.13632915"
+       inkscape:transform-center-y="-5.4254192"
+       transform="matrix(0.87625128,0,0,0.87625128,13.990544,18.25522)" />
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+.card {
+    border-radius: 15px;
+    border: 1px solid lavender;
+    width: 400px; 
+}
+
+.tag {
+    border-radius: 50px;
+    width: fit-content;
+    padding: 5px 20px;
+    height: fit-content;
+    background-color: darkslateblue;
+}

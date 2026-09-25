@@ -1,0 +1,33 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 500px;
+    font-weight: 500;
+}
+
+textarea {
+    height: 30dvh;
+    resize: none;
+}
+
+textarea, input {
+    font-weight: 400;
+}
+
+button {
+    font-weight: 600;
+    width: fit-content;
+    padding: 8px 20px;
+}
+
+button:hover {
+    opacity: 75%;
+}

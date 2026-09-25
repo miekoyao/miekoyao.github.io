@@ -1,0 +1,34 @@
+.star-field {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+}
+
+.star img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.star.spin img {
+  animation: star-spin 1s ease-in-out;
+  /* animation: star-blink 1s ease-in-out; */
+}
+
+@keyframes star-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes star-blink {
+  to { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star.spin img { animation: none; }
+}

@@ -1,0 +1,34 @@
+.header-bar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.name-logo {
+    align-items: center;
+    font-weight: 600;
+}
+
+.links {
+    top: 0;
+    align-items: center;
+}
+
+.links a {
+  font-weight: 600;
+  padding-bottom: 4px;
+
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;   
+  background-size: 0% 2px;
+  transition: background-size 0.5s ease;
+}
+
+.links a:hover,
+.links a:focus-visible,
+.links a.active {
+  background-position: 0 100%;     
+  background-size: 100% 2px;
+}
