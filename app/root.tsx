@@ -10,7 +10,8 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { HeaderBar } from "./components/headerBar";
-import { StarBackground } from "./components/StarBackground";
+import { StarBackground } from "./components/starBackground";
+import { StarStatsProvider } from "./components/starStatsContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -40,9 +41,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
       </head>
       <body>
-        <StarBackground/>
-        <HeaderBar/>
-        {children}
+        <StarStatsProvider>
+          <StarBackground/>
+          <HeaderBar/>
+          {children}
+        </StarStatsProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

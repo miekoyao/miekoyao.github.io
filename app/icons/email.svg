@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="currentColor"
+   height="100%"
+   width="100%"
+   version="1.1"
+   id="Layer_1"
+   viewBox="-143 145 512 512"
+   xml:space="preserve"
+   sodipodi:docname="email.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs1" /><sodipodi:namedview
+   id="namedview1"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.83105469"
+   inkscape:cx="338.7262"
+   inkscape:cy="240.0564"
+   inkscape:window-width="1920"
+   inkscape:window-height="1111"
+   inkscape:window-x="-9"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<path
+   id="path1"
+   d="M 113 145 C -28.4 145 -143 259.6 -143 401 C -143 542.4 -28.4 657 113 657 C 254.4 657 369 542.4 369 401 C 369 259.6 254.4 145 113 145 z M -42.685547 290.42578 L 271.79297 290.42578 L 271.79297 305.85156 L 114.57031 444.71094 L -42.685547 305.85156 L -42.685547 290.42578 z M -42.685547 347.80273 L 114.55469 486.56836 L 271.79297 347.80273 L 271.79297 526.28711 L -42.685547 526.28711 L -42.685547 347.80273 z " />
+</svg>

@@ -1,19 +1,26 @@
-import "./projectCard.css";
+import { StarIcon } from "~/icons/star";
 import type { CardProps } from "./projects";
-
-
 
 export function ProjectCard({ title, tags, thumbnail, description }: CardProps) {
     return (
-    <div className="card">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <div className="tags flex gap-10">
-            {tags.map((tag) => {
+    <div className="w-90 p-6 rounded-xl bg-slate-300 dark:bg-slate-800 flex flex-col justify-between">
+        <div>
+            <div className="bg-slate-200 dark:bg-slate-700 rounded-lg" style={{width: "fit-content", height: "fit-content"}}>
+                { thumbnail ? <img className="object-cover object-top w-full aspect-3/2 rounded-lg border-5 border-offset-1 border-slate-200 dark:border-slate-700 mb-3" 
+                    src={`/assets/projects/${thumbnail}`}/> : ""}
+            </div>
+            <h3 className="font-extrabold text-xl pt-2">{title}</h3>
+            <p className="pt-2">{description}</p>
+        </div>
+        <div className="tags flex flex-wrap pt-5">
+            {tags.map((tag, index) => {
                 return (
-                <div key={tag} className="tag">
-                    {tag}
-                </div>
+                    <div key={tag} className="flex items-center pt-1">
+                        <p className="px-3 rounded-full bg-slate-800 dark:bg-slate-300 text-slate-300 dark:text-slate-800">
+                            {tag}
+                        </p>
+                        {index < tags.length - 1 && <div className="w-2 h-2 mx-2"><StarIcon color="currentColor"/></div>}
+                    </div>
                 );
             })}
         </div>

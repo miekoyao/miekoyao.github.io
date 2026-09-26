@@ -56,20 +56,64 @@ html.dark {
 }
 
 html, body, a, button, [role="button"], .star-field {
-  cursor: url('/assets/cursor.svg'), auto;
+  cursor: url('/assets/cursor.svg') 8 8, auto;
 }
 
 
 body {
-  font-family: MontserratE, Montserrat, sans-serif;
-  height: 100dvh;
+  position: relative;
+  min-height: 100dvh; 
   width: 100dvw;
+  font-family: MontserratE, Montserrat, sans-serif;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-p {
-  padding-left: 40px;
-  padding-right: 40px;
+html {
+  scroll-behavior: smooth;
+}
+
+
+section {
+  scroll-margin-top: 80px;
+  min-height: calc(100vh - 86px);
+  min-height: calc(100dvh - 86px);
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 1120px;
+  margin-bottom: 50px;
+}
+
+section:last-of-type {
+  margin-bottom: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  gap: 5px;
+  transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+  transform:
+      scale(1.075);
+}
+
+@media (max-width: 600px) {
+  section {
+    width: 90%;
+  }
 }

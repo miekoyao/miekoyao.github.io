@@ -1,5 +1,5 @@
 .star-field {
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: -1;
   pointer-events: none;
@@ -8,6 +8,18 @@
 
 .star {
   position: absolute;
+  transform-origin: center;
+  transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.star.hovering {
+  transform: scale(1.35);
+}
+
+.star svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .star img {
@@ -16,19 +28,52 @@
   height: 100%;
 }
 
-.star.spin img {
-  animation: star-spin 1s ease-in-out;
-  /* animation: star-blink 1s ease-in-out; */
+.star-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  animation: particle-burst 0.6s ease-out forwards;
 }
 
-@keyframes star-spin {
-  to { transform: rotate(360deg); }
+@keyframes particle-burst {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(var(--dx), var(--dy)) scale(0);
+    opacity: 0;
+  }
 }
 
-@keyframes star-blink {
-  to { opacity: 0; }
+.constellation-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.constellation-line {
+  stroke-width: 1.5;
+  opacity: 0.6;
+  transition: stroke-dashoffset 0.5s ease-out, stroke 0.3s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .star.spin img { animation: none; }
+  .star {
+    transition: none;
+  }
+  .star-particle {
+    animation: none;
+    opacity: 0;
+  }
+  .constellation-line {
+    transition: none;
+  }
 }

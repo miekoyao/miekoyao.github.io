@@ -7,9 +7,9 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Experiences() {
+export default function Experience() {
   return <>
-    <p>experience</p>
+    <h2>Experiences</h2>
 
     {/* 
     button to show all, add note about being proud of the jobs that have made me who i am :)
