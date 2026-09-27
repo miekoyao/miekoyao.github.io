@@ -5,7 +5,7 @@ export default function Projects() {
   return <>
     <h2>Projects</h2>
     <div className="flex justify-center">
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid grid-cols-1 grid2:grid-cols-2 grid3:grid-cols-3 gap-5">
           {projects.map((project, index) => {
               return (<ProjectCard key={project} {...project}/>)
           })}

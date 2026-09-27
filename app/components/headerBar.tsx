@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import { ModeToggle } from './modeToggle';
 
-// const navItems = ["about", "projects", "experiences", "contact"];
-
-const navItems = ["about", "projects", "contact"];
+const navItems = ["about", "projects", "experiences", "contact"];
 
 function useScrollSpy(ids: string[], options?: IntersectionObserverInit) {
   const [activeId, setActiveId] = useState<string | null>(null); // no default
@@ -69,9 +67,9 @@ export function HeaderBar() {
         {navItems.map((item) => (
           <NavItem key={item} id={item} label={item} isActive={activeId === item} />
         ))}
-        <a href={"/assets/cv.pdf"} target="_blank">
+        {/* <a href={"/assets/cv.pdf"} target="_blank">
           resume
-        </a>
+        </a> */}
         <ModeToggle />
       </div>
     </div>

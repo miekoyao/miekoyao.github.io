@@ -21,7 +21,7 @@ export default function App() {
         <section id="home" className="flex flex-col justify-center mt-[86px]"><Home /></section>
         <section id="about" className="flex flex-col justify-center"><About /></section>
         <section id="projects"><Projects /></section>
-        {/* <section id="experiences"><Experience /></section> */}
+        <section id="experiences"><Experience /></section>
         <section id="contact"><Contact /></section>
       </main>
     </>

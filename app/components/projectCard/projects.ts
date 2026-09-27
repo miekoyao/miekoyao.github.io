@@ -39,7 +39,7 @@ export const projects: Array<CardProps> = [
         tags: ["D3.js", "Tableau"],
         categories: ["Web Dev", "Design", "Data",],
         thumbnail: "bike.png",
-        description: "A data story with interactive data visualizations examining biking in Toronto with comparisons to Montreal and Vancouver.",
+        description: "A data story with interactive data visualizations examining biking in Toronto with comparisons to Montreal and Vancouver. Utilized government data and bikeshare GTFS feeds.",
     },
     {
         title: "Discovery of Insulin: Interactive Exhibit",
@@ -74,7 +74,7 @@ export const projects: Array<CardProps> = [
         tags: ["HTML", "CSS"],
         categories: ["Web Dev", "Design",],
         thumbnail: "goserviceguarantee.png",
-        description: "Email templates made for the new GO Service Guarantee portal, tested extensively across email clients",
+        description: "Email templates developed for the new GO Service Guarantee portal, tested extensively across email clients.",
     },
 ]
 

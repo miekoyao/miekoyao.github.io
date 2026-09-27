@@ -13,6 +13,8 @@ html.dark {
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --breakpoint-grid2: 900px;
+  --breakpoint-grid3: 1375px;
 }
 
 @font-face {
@@ -105,11 +107,50 @@ h2 {
   justify-content: center;
   gap: 5px;
   transition: transform 0.2s ease;
+  z-index: 5;
 }
 
 .social-link:hover {
   transform:
       scale(1.075);
+}
+
+:root {
+  --timeline-work: var(--color-slate-300);    
+  --timeline-text: var(--color-slate-800);
+  --timeline-bg: var(--color-slate-200);
+}
+
+.dark {
+  --timeline-work: var(--color-slate-800);    
+  --timeline-text: var(--color-slate-300);
+  --timeline-bg: var(--color-slate-950);
+}
+
+.vertical-timeline-element-icon svg {
+  left: 0 !important;
+  top: 0 !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+}
+
+.vertical-timeline-element-icon.shadow-size-small {
+  box-shadow: none !important;
+}
+
+.vertical-timeline-element-content h3 {
+  font-weight: bold;
+}
+
+.vertical-timeline-element-content h4 {
+  font-weight: regular;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline.vertical-timeline--two-columns {
+    width: 100% !important;
+  }
+
 }
 
 @media (max-width: 600px) {

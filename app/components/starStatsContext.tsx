@@ -10,21 +10,15 @@ type StarStatsApi = StarStats & {
 const StarStatsContext = createContext<StarStatsApi | null>(null);
 
 export function StarStatsProvider({ children }: { children: ReactNode }) {
-  const hoveredIds = useRef(new Set<number>());
-  const clickedIds = useRef(new Set<number>());
   const connectedIds = useRef(new Set<number>());
   const [stats, setStats] = useState<StarStats>({ hoveredCount: 0, clickedCount: 0, connectedCount: 0 });
 
-  const markHovered = useCallback((id: number) => {
-    if (hoveredIds.current.has(id)) return;
-    hoveredIds.current.add(id);
-    setStats((s) => ({ ...s, hoveredCount: hoveredIds.current.size }));
+  const markHovered = useCallback((_id: number) => {
+    setStats((s) => ({ ...s, hoveredCount: s.hoveredCount + 1 }));
   }, []);
 
-  const markClicked = useCallback((id: number) => {
-    if (clickedIds.current.has(id)) return;
-    clickedIds.current.add(id);
-    setStats((s) => ({ ...s, clickedCount: clickedIds.current.size }));
+  const markClicked = useCallback((_id: number) => {
+    setStats((s) => ({ ...s, clickedCount: s.clickedCount + 1 }));
   }, []);
 
   const markConnected = useCallback((id: number) => {
