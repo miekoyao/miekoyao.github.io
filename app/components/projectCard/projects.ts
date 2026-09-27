@@ -6,7 +6,8 @@ export interface CardProps {
   categories: Array<string>;
   thumbnail: string;
   description: string;
-  link?: string;
+  demo?: string;
+  repo?: string;
 }
 
 export const projects: Array<CardProps> = [
@@ -16,7 +17,8 @@ export const projects: Array<CardProps> = [
         categories: ["Web Dev", "Design",],
         thumbnail: "loso.png",
         description: "A website showcasing winners of the School of Cities Local Solutions contest, for organizations solving place-based challenges.",
-        link: "https://schoolofcities.github.io/local-solutions"
+        demo: "https://schoolofcities.github.io/local-solutions",
+        repo: "https://github.com/schoolofcities/local-solutions",
     },
     {
         title: "Designing Deliberation: Framework Builder Tool",
@@ -24,7 +26,8 @@ export const projects: Array<CardProps> = [
         categories: ["Web Dev", "Design",],
         thumbnail: "deliberation.png",
         description: "An interactive toolkit for urban practitioners to design high-level public engagement plans.",
-        link: "https://schoolofcities.github.io/designing-deliberation/interactive-tool/framework",
+        demo: "https://schoolofcities.github.io/designing-deliberation/interactive-tool/framework",
+        repo: "https://github.com/schoolofcities/designing-deliberation",
     },
     {
         title: "Transit Oriented Development Scrollytelling",
@@ -32,7 +35,8 @@ export const projects: Array<CardProps> = [
         categories: ["Web Dev", "Design",],
         thumbnail: "tod.png",
         description: "Animated scroll-style webpages featuring case studies and research articles about Transit Oriented Design in Canada.",
-        link: "https://schoolofcities.github.io/tod-canada/case-study/arbutus",
+        demo: "https://schoolofcities.github.io/tod-canada/case-study/arbutus",
+        repo: "https://github.com/schoolofcities/tod-canada",
     },
     {
         title: "Transporting around Toronto",
@@ -40,6 +44,8 @@ export const projects: Array<CardProps> = [
         categories: ["Web Dev", "Design", "Data",],
         thumbnail: "bike.png",
         description: "A data story with interactive data visualizations examining biking in Toronto with comparisons to Montreal and Vancouver. Utilized government data and bikeshare GTFS feeds.",
+        demo: "https://polite-wave-03b233410.7.azurestaticapps.net/",
+        repo: "https://github.com/miekoyao/bike-data",
     },
     {
         title: "Discovery of Insulin: Interactive Exhibit",
@@ -47,6 +53,8 @@ export const projects: Array<CardProps> = [
         categories: ["Web Dev", "Design",],
         thumbnail: "insulinexhibit.png",
         description: "Educational science exhibit inspired by the discovery of insulin by Frederick Banting and Charles Best. Created using custom 3D-printed models, sensors, and microcontrollers.",
+        demo: "https://miekoyao.github.io/history-of-insulin-project/",
+        repo: "https://github.com/miekoyao/history-of-insulin-project",
     },
     {
         title: "Cooking Companion App Prototype",
@@ -54,6 +62,8 @@ export const projects: Array<CardProps> = [
         categories: ["Design",],
         thumbnail: "cookingcompanion.png",
         description: "Designs for a social media recipe aggregator & recommendation app, with chatbot feature to aid with decision paralysis. Designed iteratively through user surveys, interviews, and testing sessions.",
+        demo: "https://www.figma.com/proto/Y898LmI3wB0IGv067sQz0M/Cooking-companion?node-id=1104-29478&p=f&t=mj7f4ZneJmjOnnX8-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A497&starting-point-node-id=1104%3A29478&show-proto-sidebar=1",
+        repo: "https://www.figma.com/design/Y898LmI3wB0IGv067sQz0M/Cooking-companion?node-id=1-497&t=7I23nmNCrupnSe6q-1",
     },
     // {
     //     title: "Oxtail Recipe App",

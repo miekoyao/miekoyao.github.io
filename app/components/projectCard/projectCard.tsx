@@ -1,7 +1,7 @@
 import { StarIcon } from "~/icons/star";
 import type { CardProps } from "./projects";
 
-export function ProjectCard({ title, tags, thumbnail, description }: CardProps) {
+export function ProjectCard({ title, tags, thumbnail, description, demo, repo }: CardProps) {
     return (
     <div className="w-90 p-6 rounded-xl bg-slate-300 dark:bg-slate-800 flex flex-col justify-between">
         <div>
@@ -11,6 +11,13 @@ export function ProjectCard({ title, tags, thumbnail, description }: CardProps) 
             </div>
             <h3 className="font-extrabold text-xl pt-2">{title}</h3>
             <p className="pt-2">{description}</p>
+            { (demo || repo) && 
+                <div className="flex gap-5 pt-2">
+                    { demo && <a href={demo} target="_blank" className="underline italic hover:opacity-75">demo link</a>}
+                    { (demo && repo) && <p>|</p>}
+                    { repo && <a href={repo} target="_blank" className="underline italic hover:opacity-75">repo link</a>}
+                </div>
+            }
         </div>
         <div className="tags flex flex-wrap pt-5">
             {tags.map((tag, index) => {
