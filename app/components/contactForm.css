@@ -10,7 +10,7 @@ label {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    width: 75dvw;
+    width: 70dvw;
     max-width: 450px;
     font-weight: 500;
 }
@@ -53,5 +53,12 @@ button:disabled {
 @media (prefers-reduced-motion: reduce) {
     .submit-spinner {
         animation: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 25px;
+        gap: 20px;
     }
 }

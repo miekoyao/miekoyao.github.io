@@ -1,5 +1,5 @@
 import './headerBar.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { ModeToggle } from './modeToggle';
 
@@ -120,15 +120,25 @@ function useScrollSpy(ids: string[], options?: IntersectionObserverInit) {
   return activeId;
 }
 
-function NavItem({ id, label, isActive }: { id: string; label: string; isActive: boolean }) {
+function NavItem({
+  id,
+  label,
+  isActive,
+  onNavigate,
+}: {
+  id: string;
+  label: string;
+  isActive: boolean;
+  onNavigate?: () => void;
+}) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // keep the URL in sync without triggering a router navigation or scroll jump
       history.replaceState(null, '', `#${id}`);
     }
+    onNavigate?.();
   };
 
   return (
@@ -138,22 +148,114 @@ function NavItem({ id, label, isActive }: { id: string; label: string; isActive:
   );
 }
 
+function HamburgerIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      {open ? (
+        <>
+          <line x1="6" y1="6" x2="18" y2="18" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+        </>
+      ) : (
+        <>
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </>
+      )}
+    </svg>
+  );
+}
+
 export function HeaderBar() {
   const activeId = useScrollSpy(navItems);
   useHashScroll();
 
+  const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  // Close on Escape or a click outside the header
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false);
+    };
+    const onPointerDown = (e: PointerEvent) => {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    document.addEventListener('pointerdown', onPointerDown);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.removeEventListener('pointerdown', onPointerDown);
+    };
+  }, [menuOpen]);
+
   return (
-    <div className="header-bar flex gap-10 bg-slate-50 dark:bg-slate-950">
+    <div
+      ref={headerRef}
+      className="header-bar relative flex items-center justify-between gap-10 bg-slate-50 dark:bg-slate-950"
+    >
       <Link to="/" className="flex gap-2 name-logo">
         <img src={'/assets/logo.svg'} alt="Logo" />
         Mieko Yao
       </Link>
-      <div className="links flex gap-10">
-        {navItems.map((item) => (
-          <NavItem key={item} id={item} label={item} isActive={activeId === item} />
-        ))}
+
+      <div className="flex items-center gap-4">
+        {/* Desktop links: hidden below the grid2 breakpoint */}
+        <nav className="links flex gap-10 max-grid2:hidden" aria-label="Primary">
+          {navItems.map((item) => (
+            <NavItem key={item} id={item} label={item} isActive={activeId === item} />
+          ))}
+        </nav>
+
+        {/* Single ModeToggle instance, always visible */}
         <ModeToggle />
+
+        {/* Hamburger: only visible below the grid2 breakpoint */}
+        <button
+          type="button"
+          className="hamburger grid2:hidden"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          onClick={() => setMenuOpen((o) => !o)}
+        >
+          <HamburgerIcon open={menuOpen} />
+        </button>
       </div>
+
+      {/* Mobile dropdown */}
+      {menuOpen && (
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile"
+          className="mobile-menu absolute left-0 right-0 top-full flex flex-col gap-6 p-6 grid2:hidden bg-slate-50 dark:bg-slate-950 shadow-md"
+        >
+          {navItems.map((item) => (
+            <NavItem
+              key={item}
+              id={item}
+              label={item}
+              isActive={activeId === item}
+              onNavigate={() => setMenuOpen(false)}
+            />
+          ))}
+        </nav>
+      )}
     </div>
   );
 }

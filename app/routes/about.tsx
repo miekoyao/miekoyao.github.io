@@ -1,6 +1,6 @@
 export default function About() {
   return <>
-    <div className="flex items-center gap-15">
+    <div className="flex justify-center items-center gap-15 flex-wrap grid2:flex-nowrap">
       <div>
         <h2 className="bg-slate-50 dark:bg-slate-950">A Little Introduction</h2>
         <p className="bg-slate-50 dark:bg-slate-950 pb-5">I'm a recent graduate from the University of Toronto with an Honours Bachelor of Science, where I double majored in Computer Science and Quantitative Biology. I have a diverse range of experience spanning web development, software engineering, UI/UX design, product management, and business analysis. I love staying adaptable, applying my expertise and learning new skills to collaborate effectively with my teammates.</p>

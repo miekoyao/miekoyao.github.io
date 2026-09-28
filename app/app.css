@@ -15,6 +15,7 @@ html.dark {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --breakpoint-grid2: 900px;
   --breakpoint-grid3: 1375px;
+  --breakpoint-contact: 1100px;
 }
 
 @font-face {
@@ -155,6 +156,6 @@ h2 {
 
 @media (max-width: 600px) {
   section {
-    width: 90%;
+    width: 85%;
   }
 }

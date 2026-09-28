@@ -10,33 +10,33 @@ import { CurvedText } from "~/components/curvedText";
 export default function Contact() {
   const { hoveredCount, clickedCount, connectedCount } = useStarStats();
   return (
-  <div className="flex justify-center gap-15">
-    <div className="flex flex-col w-40 justify-center gap-1">
-      <div className="relative flex flex-col w-40 gap-7 justify-center">
-        <div className="absolute -top-11">
+  <div className="flex justify-center gap-15 max-contact:flex-wrap max-contact:gap-y-30 max-contact:mb-20">
+    <div className="flex flex-col w-40 justify-center gap-1 max-contact:w-auto">
+      <div className="relative flex flex-col w-40 gap-7 justify-center max-contact:flex-row max-contact:w-auto">
+        <div className="absolute -top-11 max-contact:-left-11">
           <CurvedText text="MY LINKS" width={200} height={200} reversed={false} offsetDegrees={200} pClasses="tracking-md font-bold text-xl"/>
         </div>
-        <a href="https://www.linkedin.com/in/miekoyao" className="social-link w-25 h-25 self-end" target="_blank">
+        <a href="https://www.linkedin.com/in/miekoyao" className="social-link w-25 h-25 max-contact:size-20 self-end" target="_blank">
           <Linkedin/>
           <p>linkedin</p>
         </a>
-        <a href="https://www.github.com/miekoyao" className="social-link w-25 h-25 self-start" target="_blank">
+        <a href="https://www.github.com/miekoyao" className="social-link w-25 h-25 max-contact:size-20 self-start" target="_blank">
           <Github/>
           <p>github</p>
         </a>
-        <a href="mailto:miekoyao@gmail.com" className="social-link w-25 h-25 self-end" target="_blank">
+        <a href="mailto:miekoyao@gmail.com" className="social-link w-25 h-25 max-contact:size-20 self-end" target="_blank">
           <Email/>
           <p>email</p>
         </a>
       </div>
     </div>
 
-    <div>
+    <div className="max-contact:order-first max-contact:basis-full max-contact:flex max-contact:flex-col max-contact:items-center">
       <h2>Say hi!</h2>
       <ContactForm/>
     </div>    
 
-    <div className="relative flex flex-col w-45 justify-center">
+    <div className="relative flex flex-col w-45 justify-center max-contact:hidden">
       <div className="relative flex flex-col w-45 gap-5 justify-center">
         <div className="absolute -top-10">
           <CurvedText text="YOUR STATS" width={200} height={200} reversed={false} offsetDegrees={270} pClasses="tracking-md font-bold text-xl"/>

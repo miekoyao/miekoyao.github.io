@@ -3,7 +3,7 @@ import type { CardProps } from "./projects";
 
 export function ProjectCard({ title, tags, thumbnail, description, demo, repo }: CardProps) {
     return (
-    <div className="w-90 p-6 rounded-xl bg-slate-300 dark:bg-slate-800 flex flex-col justify-between">
+    <div className="w-80 p-6 rounded-xl bg-slate-300 dark:bg-slate-800 flex flex-col justify-between sm:w-90">
         <div>
             <div className="bg-slate-200 dark:bg-slate-700 rounded-lg" style={{width: "fit-content", height: "fit-content"}}>
                 { thumbnail ? <img className="object-cover object-top w-full aspect-3/2 rounded-lg border-5 border-offset-1 border-slate-200 dark:border-slate-700 mb-3" 
