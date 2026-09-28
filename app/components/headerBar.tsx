@@ -214,7 +214,7 @@ export function HeaderBar() {
         Mieko Yao
       </Link>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-0 grid2:gap-4">
         {/* Desktop links: hidden below the grid2 breakpoint */}
         <nav className="links flex gap-10 max-grid2:hidden" aria-label="Primary">
           {navItems.map((item) => (
